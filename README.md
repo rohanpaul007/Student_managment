@@ -1,2 +1,2 @@
-# Student_managment
+# Student_management
 Attendence
