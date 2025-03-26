@@ -1,0 +1,436 @@
+
+body{
+     font-family: "Jost", serif; 
+
+}
+
+
+
+.sidebar_container{
+    margin: 0px;
+    width: 250px;
+    background-color:steelblue;
+    height:100%;
+    
+    
+}
+
+/* .sidebar_container .side_menu li{
+ list-style-type:none;
+ color:#fff;
+ font-size: 20px;
+ line-height: 85px;
+ margin-top: 15px;
+ gap:10px;
+ margin-top: 50px;
+ 
+
+} */
+
+
+.sidebar_container {
+    width: 250px; /* Sidebar width */
+    background-color:steelblue;
+    position: fixed;
+    height: 100vh; /* Full height of the viewport */
+    overflow-y: auto; /* Scroll enabled if content exceeds */
+}
+
+.side_menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.side_menu li {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+.side_menu a {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    color: #333;
+    padding: 10px;
+}
+
+.side_menu i {
+    margin-right: 10px;
+}
+
+
+.section_student_div{
+    flex-grow: 1;
+    padding: 20px;
+}
+.sidebar_container .side_menu li a{
+    text-decoration: none;
+    color:#fff;
+    
+   
+
+}
+
+.sidebar_container .side_menu i{
+    color:#fff;
+    margin-right: 15px;
+}
+
+
+.sidebar_container .side_menu li{
+    text-decoration: none;
+}
+.form_container{
+    margin-left: 250px; /* Sidebar er width er soman */
+    width: calc(100% - 250px);
+    padding: 20px;
+}
+.content {
+    margin-left: 130px; /* Sidebar er width er soman */
+    width: calc(100% - 150px);
+    padding: 20px;
+}
+.class_managment{
+    margin-left: 130px; /* Sidebar er width er soman */
+    width: calc(100% - 150px);
+    padding: 20px;
+}
+
+input[type="radio"] {
+    padding:10px;
+    width: 10px;
+    height: 10px;
+    accent-color: blue; /* Checkbox এর রঙ পরিবর্তন */
+}
+
+
+.attendance-btn {
+    min-width: 90px;
+    position: relative;
+}
+.loading:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(255, 255, 255, 0.7);
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><path fill="%23000" d="M73,50c0-12.7-10.3-23-23-23S27,37.3,27,50 M30.9,50c0-10.5,8.5-19.1,19.1-19.1S69.1,39.5,69.1,50"><animateTransform attributeName="transform" attributeType="XML" type="rotate" dur="1s" from="0 50 50" to="360 50 50" repeatCount="indefinite"/></path></svg>');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 20px 20px;
+}
+.toast {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1100;
+    min-width: 250px;
+}
+.history-btn {
+    cursor: pointer;
+}
+
+:root {
+    --sidebar-width: 250px;
+}
+
+body {
+    font-family: 'Jost', sans-serif;
+    overflow-x: hidden;
+}
+
+/* Mobile-first sidebar */
+.sidebar_container {
+    width: var(--sidebar-width);
+    position: fixed;
+    top: 0;
+    left: -250px;
+    height: 100vh;
+    z-index: 1000;
+    background: #343a40;
+    transition: all 0.3s;
+}
+
+.sidebar_container.show {
+    left: 0;
+}
+
+.side_menu {
+    list-style: none;
+    padding: 20px 0;
+}
+
+.side_menu li a {
+    color: #fff;
+    padding: 10px 15px;
+    display: block;
+    text-decoration: none;
+    transition: all 0.3s;
+}
+
+.side_menu li a:hover, .side_menu li a.active {
+    background: #495057;
+    color: #fff;
+}
+
+.side_menu li a i {
+    margin-right: 10px;
+    width: 20px;
+    text-align: center;
+}
+
+/* Main content */
+.content {
+    margin-left: 0;
+    width: 100%;
+    transition: all 0.3s;
+}
+
+.sidebar-open .content {
+    margin-left: var(--sidebar-width);
+}
+
+/* Mobile menu toggle */
+.mobile-menu-toggle {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    z-index: 1050;
+    background: #343a40;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 4px;
+}
+
+/* Responsive table */
+.table-responsive {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+.student-img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+/* Attendance buttons */
+.attendance-btn {
+    min-width: 80px;
+    padding: 5px;
+    font-size: 14px;
+}
+
+.attendance-btn i {
+    margin-right: 5px;
+}
+
+/* Status badges */
+.status-badge {
+    font-size: 14px;
+    padding: 5px 10px;
+}
+
+/* Toast notifications */
+.toast-container {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1100;
+    min-width: 250px;
+}
+
+/* Loading state */
+.loading {
+    position: relative;
+    opacity: 0.7;
+}
+
+.loading:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(255, 255, 255, 0.7);
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><path fill="%23000" d="M73,50c0-12.7-10.3-23-23-23S27,37.3,27,50 M30.9,50c0-10.5,8.5-19.1,19.1-19.1S69.1,39.5,69.1,50"><animateTransform attributeName="transform" attributeType="XML" type="rotate" dur="1s" from="0 50 50" to="360 50 50" repeatCount="indefinite"/></path></svg>');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 20px 20px;
+}
+
+/* Media queries for different screen sizes */
+@media (min-width: 768px) {
+    .sidebar_container {
+        left: 0;
+    }
+    
+    .content {
+        margin-left: var(--sidebar-width);
+    }
+    
+    .mobile-menu-toggle {
+        display: none;
+    }
+    
+    .student-img {
+        width: 60px;
+        height: 60px;
+    }
+}
+
+@media (max-width: 767px) {
+    .section_student_div h1 {
+        font-size: 1.5rem;
+    }
+    
+    .attendance-btn {
+        min-width: 70px;
+        padding: 3px;
+        font-size: 12px;
+    }
+    
+    .status-badge {
+        font-size: 12px;
+        padding: 3px 6px;
+    }
+}
+
+@media (max-width: 575px) {
+    .section_student_div h1 {
+        font-size: 1.3rem;
+        padding: 10px 0;
+    }
+    
+    .card-body {
+        padding: 15px;
+    }
+    
+    .attendance-btn {
+        min-width: 60px;
+        font-size: 11px;
+    }
+    
+    .student-img {
+        width: 40px;
+        height: 40px;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .class_managment {
+        padding: 0 5px;
+    }
+    
+    .student-img {
+        width: 35px !important;
+        height: 35px !important;
+    }
+    
+    .attendance-btn {
+        font-size: 0.7rem !important;
+        min-width: 50px !important;
+        padding: 0.2rem 0.3rem !important;
+    }
+    
+    .status-badge {
+        font-size: 0.65rem !important;
+        padding: 0.25em 0.4em !important;
+    }
+    
+    table {
+        font-size: 0.8rem;
+    }
+    
+    th, td {
+        padding: 0.5rem !important;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+    .student-img {
+        width: 45px !important;
+        height: 45px !important;
+    }
+    
+    .attendance-btn {
+        font-size: 0.8rem !important;
+    }
+    
+    .status-badge {
+        font-size: 0.8rem !important;
+    }
+    
+    table {
+        font-size: 0.9rem;
+    }
+}
+
+/* Special handling for landscape mobile */
+@media (max-width: 767.98px) and (orientation: landscape) {
+    .student-name span.d-inline.d-md-none {
+        font-size: 0.8rem !important;
+    }
+    
+    .attendance-btn {
+        min-width: 45px !important;
+        padding: 0.15rem 0.25rem !important;
+    }
+}
+
+/* Print Styles */
+@media print {
+    .class_managment {
+        padding: 0 !important;
+    }
+    
+    .card {
+        border: none !important;
+        box-shadow: none !important;
+    }
+    
+    table {
+        font-size: 10pt !important;
+    }
+    
+    .attendance-btn, .mobile-menu-toggle {
+        display: none !important;
+    }
+}
+.student-card {
+    transition: all 0.2s ease;
+}
+.student-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0.5rem 1rem rgba(0,0,0,0.15) !important;
+}
+
+@media (max-width: 767.98px) {
+    .student-card {
+        max-width: 100%;
+    }
+    .student-card img {
+        width: 80px !important;
+        height: 80px !important;
+    }
+    .card-title {
+        font-size: 1rem;
+    }
+    .btn {
+        padding: 0.25rem 0.5rem;
+        font-size: 0.8rem;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+    .student-card img {
+        width: 90px !important;
+        height: 90px !important;
+    }
+}
